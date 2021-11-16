@@ -1,6 +1,6 @@
 resource "aws_instance" "webapp1" {
   ami                         = var.ami
-  instance_type               = "t2.micro"
+  instance_type               = "t2.small"
   associate_public_ip_address = "true"
   subnet_id                   = aws_subnet.PublicAZA.id
   vpc_security_group_ids      = [aws_security_group.WebServer.id]
@@ -12,7 +12,7 @@ resource "aws_instance" "webapp1" {
 }
 resource "aws_instance" "webapp2" {
   ami                         = var.ami
-  instance_type               = "t2.micro"
+  instance_type               = "tt2.small"
   associate_public_ip_address = "true"
   subnet_id                   = aws_subnet.PublicAZB.id
   vpc_security_group_ids      = [aws_security_group.WebServer.id]
@@ -25,7 +25,7 @@ resource "aws_instance" "webapp2" {
 
 resource "aws_instance" "webapp3" {
   ami                         = var.ami
-  instance_type               = "t2.micro"
+  instance_type               = "tt2.small"
   associate_public_ip_address = "true"
   subnet_id                   = aws_subnet.PublicAZC.id
   vpc_security_group_ids      = [aws_security_group.WebServer.id]
